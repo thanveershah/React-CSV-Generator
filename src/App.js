@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Csv from "./Component/Csv";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const exportCSV = () => {
+    const newArray = [
+      {
+        Booking: "Abc",
+        "Receiver name": "Abc",
+        "Receiver phone": "Abc",
+        "Order time": "Abc",
+        "Pickup address": "Abc",
+        "Drop address": "Abc",
+        "Driver name": "Abc",
+        Status: "Abc",
+        "Pickup zone": "Abc",
+        "Drop zone": "Abc",
+        "Product quantity": "Abc",
+        "Pick up time": "Abc",
+        "Drop time": "Abc",
+        "Creation date": "Abc",
+        Fare: "Abc"
+      }
+    ];
+    return newArray;
+  };
+
+  return <Csv csvData={exportCSV()} fileName={"Task"} />;
+};
 
 export default App;
